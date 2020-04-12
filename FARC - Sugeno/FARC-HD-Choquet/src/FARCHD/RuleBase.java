@@ -14,7 +14,6 @@ package FARCHD;
  * @since JDK1.5
  */
 
-import java.io.IOException;
 import java.util.*;
 import org.core.*;
 
@@ -180,7 +179,7 @@ public class RuleBase {
   }
 */
 
-    public void evaluate() throws IOException {
+    public void evaluate(){
         int nHits, prediction;//,cont;
 
         //prediction = new int[2];
@@ -207,7 +206,7 @@ public class RuleBase {
         this.fitness = (100.0 * nHits) / (1.0 * this.train.size());
     }
     
-     public double evaluate(myDataset ds) throws IOException {
+     public double evaluate(myDataset ds){
         int nHits, prediction;//,cont;
 
         //prediction = new int[2];
@@ -236,7 +235,7 @@ public class RuleBase {
 
 
 
-  public void evaluate(double[] gene, int[] selected) throws IOException {
+  public void evaluate(double[] gene, int[] selected){
     int nHits, prediction;// cont;
 
     //prediction = new int[2];
@@ -261,7 +260,7 @@ public class RuleBase {
 	this.fitness = (100.0 * nHits) / (1.0 * this.train.size());
   }
 
-  public int FRM(double[] example) throws IOException {
+  public int FRM(double[] example){
     if (this.typeInference == 0){
         return FRM_WR(example);
 
@@ -281,7 +280,7 @@ public class RuleBase {
     }
   }
 
-  public int FRM(double[] example, int[] selected) throws IOException {
+  public int FRM(double[] example, int[] selected){
     if (this.typeInference == 0){
         return FRM_WR(example, selected);
 
@@ -302,7 +301,7 @@ public class RuleBase {
   }
 
   
-  private int FRM_Choquet(double[] example, int[] selected) throws IOException {
+  private int FRM_Choquet(double[] example, int[] selected){
       int i, clas, cont;//, cont1;
     Double maxDegree;
     Double degree, agregated;
@@ -367,7 +366,7 @@ public class RuleBase {
     return clas;
   }
   
-  private int FRM_Choquet(double[] example) throws IOException {
+  private int FRM_Choquet(double[] example){
     int i, clas, cont;//, cont1;
     Double maxDegree;
     Double degree, agregated;
@@ -424,7 +423,7 @@ public class RuleBase {
     return clas;
   }
     
-  private Double agChoquet(ArrayList<Double> asociations, ArrayList<Integer> firRul, double exp) throws IOException{
+  private Double agChoquet(ArrayList<Double> asociations, ArrayList<Integer> firRul, double exp){
       Double agr;
       double valorFuzzyMeasure, sumando, suma;
       double w[] = new double[asociations.size()];
