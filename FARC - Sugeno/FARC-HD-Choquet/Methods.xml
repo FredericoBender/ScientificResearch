@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<method_list>
+  <method>
+    <name>Clas-Fuzzy-Bull</name>
+    <family>Associative Classification</family>
+    <jar_file>Clas-Fuzzy-Bull.jar</jar_file>
+    <problem_type>classification</problem_type>
+    <input>
+      <continuous>Yes</continuous>
+      <integer>Yes</integer>
+      <nominal>Yes</nominal>
+      <missing>No</missing>
+      <imprecise>No</imprecise>
+      <multiclass>Yes</multiclass>
+      <multioutput>No</multioutput>
+    </input>
+    <output>
+      <continuous>Yes</continuous>
+      <integer>Yes</integer>
+      <nominal>Yes</nominal>
+      <missing>No</missing>
+      <imprecise>No</imprecise>
+      <multiclass>Yes</multiclass>
+      <multioutput>No</multioutput>
+    </output>
+  </method>  
+</method_list>
