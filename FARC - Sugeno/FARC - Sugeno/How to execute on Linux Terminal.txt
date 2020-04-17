@@ -9,9 +9,11 @@ for a in {appendicitis,balance,banana,bands,bupa,cleveland,contraceptive,ecoli,g
 for a in {iris,led7digit,magic,newthyroid,page-blocks,penbased,phoneme,pima,ring,saheart,satimage}; do for b in {5,50}; do for c in {1,2,3,4,5}; do java -cp build/classes FARCHD.Main param.txt $a $b $c 5; done; done; done;
 for a in {segment,shuttle,sonar,spectfheart,titanic,twonorm,vehicle,wine,wisconsin,yeast}; do for b in {5,50}; do for c in {1,2,3,4,5}; do java -cp build/classes FARCHD.Main param.txt $a $b $c 5; done; done; done;
 
+
 Rodar loop parcial feito em Shell Script --->
 for a in iris; do for b in 5; do for c in {1,2,3,4,5}; do java -cp build/classes FARCHD.Main param.txt $a $b $c 5; done; done; done;
- 
+java -cp build/classes FARCHD.Main param.txt iris 50 1 5
+
 Legenda:
 a = datasets
 b = fuzzy measures

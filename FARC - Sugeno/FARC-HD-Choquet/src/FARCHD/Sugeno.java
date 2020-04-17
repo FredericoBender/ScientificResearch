@@ -1,9 +1,8 @@
 package FARCHD;
 
 import flanagan.complex.Complex;
-import java.util.ArrayList;
 import flanagan.math.Polynomial;
-import java.util.Arrays;
+import java.util.ArrayList;
 /* @author Frederico Bender */
 
 public class Sugeno {

@@ -1,79 +1,39 @@
-@relation  ecoli
-@attribute Mcg real[0.0,89.0]
-@attribute Gvh real[1.0,88.0]
-@attribute Lip real[1.0,48.0]
-@attribute Chg real[1.0,5.0]
-@attribute Aac real[0.0,88.0]
-@attribute Alm1 real[1.0,94.0]
-@attribute Alm2 real[0.0,99.0]
-@attribute Site{cp,im,imS,imL,imU,om,omL,pp}
-@inputs Mcg,Gvh,Lip,Chg,Aac,Alm1,Alm2
-@outputs Site
+@relation  iris
+@attribute SepalLength real[4.3,7.9]
+@attribute SepalWidth real[2.0,4.4]
+@attribute PetalLength real[1.0,6.9]
+@attribute PetalWidth real[0.1,2.5]
+@attribute Class{Iris-setosa,Iris-versicolor,Iris-virginica}
+@inputs SepalLength,SepalWidth,PetalLength,PetalWidth
+@outputs Class
 @data
-cp pp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-cp cp
-im im
-im im
-im im
-im im
-im im
-im imU
-im cp
-im im
-im im
-im im
-im im
-im im
-im imU
-im cp
-im im
-imS imU
-imU imU
-imU imU
-imU imU
-imU im
-imU im
-imU im
-imU cp
-om om
-om om
-om pp
-om pp
-omL omL
-pp cp
-pp pp
-pp pp
-pp pp
-pp pp
-pp pp
-pp cp
-pp pp
-pp im
-pp pp
+Iris-setosa Iris-setosa
+Iris-setosa Iris-setosa
+Iris-setosa Iris-setosa
+Iris-setosa Iris-setosa
+Iris-setosa Iris-setosa
+Iris-setosa Iris-setosa
+Iris-setosa Iris-setosa
+Iris-setosa Iris-setosa
+Iris-versicolor Iris-versicolor
+Iris-versicolor Iris-versicolor
+Iris-versicolor Iris-versicolor
+Iris-versicolor Iris-versicolor
+Iris-versicolor Iris-versicolor
+Iris-versicolor Iris-versicolor
+Iris-versicolor Iris-versicolor
+Iris-versicolor Iris-versicolor
+Iris-versicolor Iris-versicolor
+Iris-virginica Iris-virginica
+Iris-virginica Iris-virginica
+Iris-virginica Iris-virginica
+Iris-virginica Iris-virginica
+Iris-virginica Iris-virginica
+Iris-virginica Iris-virginica
+Iris-virginica Iris-virginica
+Iris-virginica Iris-virginica
+Iris-virginica Iris-virginica
+Iris-setosa Iris-setosa
+Iris-setosa Iris-setosa
+Iris-versicolor Iris-versicolor
+Iris-virginica Iris-virginica
