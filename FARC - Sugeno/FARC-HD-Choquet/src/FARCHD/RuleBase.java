@@ -478,7 +478,7 @@ public class RuleBase {
         Sugeno sugeno = new Sugeno(); 
         /*
         ArrayList<Double> a = new ArrayList<>(); //cada instancia é uma g(x)
-        a.add(0.9);      
+        a.add(0.2);      
         a.add(0.4);
         a.add(0.6);
         */
