@@ -1,8 +1,6 @@
 package FARCHD;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Spliterator;
 
 /**
  * <p>Title: Main Class of the Program</p>
@@ -50,8 +48,8 @@ public class Main {
 
     public static void main(String args[]) {        
         String dataSetName = "ecoli";
-        int fuzzyMeasure = 5;
-        int dat = 4;        
+        int fuzzyMeasure = 50;
+        int dat = 2;        
         int crossValidationSyze = 5;
         if(args.length>1){
             dataSetName = args[1]; //iris, cleveland, automobile, wine, ecoli

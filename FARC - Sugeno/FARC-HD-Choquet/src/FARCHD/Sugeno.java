@@ -1,10 +1,9 @@
 package FARCHD;
 
-import polynom.Polynom;
+import flanagan.complex.Complex;
 import java.util.ArrayList;
-import java.util.Locale;
-import java.util.Scanner;
-
+import flanagan.math.Polynomial;
+import java.util.Arrays;
 /* @author Frederico Bender */
 
 public class Sugeno {
@@ -13,37 +12,39 @@ public class Sugeno {
      * @param x para determinar lambda ex: X = {x1, x2, xn}
      * @return valor de lambda
      */
-    public double lambda(ArrayList<Double> x){
-
+    public double lambda(ArrayList<Double> x){     
         for (int i=0;i<x.size();i++){ //Correção necessária para o funcionamento de qualquer Array
             if(x.get(i)<0.001){
                 x.set(i, 0.001);
             }
         }
-        
         //System.out.println("X = " + x);    
-        ArrayList<Double> vetorFinal = new ArrayList<>(); // utilizado no retorno
+        ArrayList<Double> vetorFinal = new ArrayList<>(); // utilizado no retorno       
         
         
-        
-        int contador = 0;        
-        Polynom polinomioFinal = new Polynom("1");
-        while (contador<x.size()){
-            String termo = "1 +" + x.get(contador) + "* x"; //Cria ( 1 + 0.1 * x)
-            Polynom polinomioNovo = new Polynom(termo);           
-            polinomioFinal = polinomioFinal.multiply(polinomioNovo); //Multiplica pela nova iteração                      
-            contador++;
+        int contador = 1;        
+        Polynomial polinomioFinal = new Polynomial(1,x.get(0));
+        while (contador<x.size()){          
+            polinomioFinal = polinomioFinal.times(new Polynomial(1,x.get(contador)));//Cria ( 1 + 0.1 * x)                        
+            contador++;           
         }
-        polinomioFinal = polinomioFinal.subtract(new Polynom("1+x"));
-        //System.out.println("Polinomio final é: " + polinomioFinal);
+        polinomioFinal = polinomioFinal.minus(new Polynomial(1,1));
+        //System.out.println("Polinomio final é: " + polinomioFinal);       
         
-       // double[] raizes = polinomioFinal.solve(); //Acha as raízes   
-       
-       double[] raizes ={1.27,-123}; 
-       
-       for (int i=0; i<raizes.length; i++){  //Procura e corrige as raízes que são 0.
-            if((raizes[i]<0.0001) & (raizes[i]>-0.0001)){
-                raizes[i]=0;
+        
+        Complex[] raizes; //Se o polinomio tem 1 elemento o lambda vale 0 
+        if(x.size()>1){ 
+            raizes = polinomioFinal.roots(); //Acha as raízes
+        }
+        else{
+            return 0;
+        }
+        
+        for (int i=0; i<raizes.length; i++){  //Procura e corrige as raízes que são 0.
+            if(raizes[i].getImag()==0){
+                if((raizes[i].getReal()<0.0001) & (raizes[i].getReal()>-0.0001)){
+                    raizes[i].setReal(0);
+                }
             }
         }
         //System.out.println("Raizes:" + Arrays.toString(raizes));
@@ -51,25 +52,21 @@ public class Sugeno {
         boolean additiveMeasure=false;
         double lambda = 0; //Pega o elemento positivo. Se encontrar
         for (int i=0; i<raizes.length; i++){      
-            double d = raizes[i];
-            if(d>-1){              
-                if(d==0){
-                    additiveMeasure = true;             
-                }
-                else{
-                    lambda=d; 
-                    additiveMeasure = false;
-                    break;
-                }
-            }            
-        }
-        /**
-        if(additiveMeasure){
-            System.out.println("Additive Measure!");
-        }
-        else{
-            System.out.println("Lambda: " + lambda + "\n"); 
-        }**/
+            if(raizes[i].getImag()==0){
+                double d = raizes[i].getReal();
+                if(d>-1){              
+                    if(d==0){
+                        additiveMeasure = true;             
+                    }
+                    else{
+                        lambda=d; 
+                        additiveMeasure = false;
+                        break;
+                    }
+                }    
+            }
+        }       
+        //System.out.println("LAMBDA: " +lambda);
     return lambda;
     }
     

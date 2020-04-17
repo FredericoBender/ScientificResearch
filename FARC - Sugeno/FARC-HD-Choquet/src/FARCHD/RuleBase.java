@@ -469,14 +469,19 @@ public class RuleBase {
                sumaBi += asociations.get(i);
            }
       }
-      sumando = 0.0;
       regAux.remove(0);
       agr = valAux.get(0);
       double x, y;
       
       double lambda=0;
       if(this.tipoFM == 50){
-        Sugeno sugeno = new Sugeno();    
+        Sugeno sugeno = new Sugeno(); 
+        /*
+        ArrayList<Double> a = new ArrayList<>(); //cada instancia é uma g(x)
+        a.add(0.9);      
+        a.add(0.4);
+        a.add(0.6);
+        */
         lambda = sugeno.lambda(valAux);
       }
 
