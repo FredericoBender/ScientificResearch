@@ -47,9 +47,9 @@ public class Main {
      */
 
     public static void main(String args[]) {        
-        String dataSetName = "ecoli";
-        int fuzzyMeasure = 50;
-        int dat = 2;        
+        String dataSetName = "iris";
+        int fuzzyMeasure = 5;
+        int dat = 1;        
         int crossValidationSyze = 5;
         if(args.length>1){
             dataSetName = args[1]; //iris, cleveland, automobile, wine, ecoli

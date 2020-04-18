@@ -65,7 +65,7 @@ public class Sugeno {
                 }    
             }
         }       
-        //System.out.println("LAMBDA: " +lambda);
+    //System.out.println("LAMBDA: " +lambda);
     return lambda;
     }
     

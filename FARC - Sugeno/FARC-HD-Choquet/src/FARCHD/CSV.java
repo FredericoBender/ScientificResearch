@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 public class CSV {
     public void save(String dataSetName, int fuzzyMeasure, int dat, double training, double testing){
     try{
-        PrintWriter pw = new PrintWriter(new FileWriter("resultados.csv", true));
+        PrintWriter pw = new PrintWriter(new FileWriter("results.csv", true));
         StringBuilder sb = new StringBuilder();
         
         sb.append(dataSetName);
