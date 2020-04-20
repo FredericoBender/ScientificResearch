@@ -1,94 +1,94 @@
 HOW TO RUN FARC-HD CLASSIFIER:
-	Prepare: If the folder "\FRBC\FARC - Sugeno\FARC - Sugeno\results.csv" contains data below the header, delete everything under the header
+    Prepare: If the folder "\FRBC\FARC - Sugeno\FARC - Sugeno\results.csv" contains data below the header, delete everything under the header
 
-	1 - Install Java, and JDK on Linux system
+    1 - Install Java, and JDK on Linux system
 
-	2 - Open the terminal on this diretory:
-		\FRBC\FARC - Sugeno\FARC - Sugeno\build
+    2 - Open the terminal on this diretory:
+        \FRBC\FARC - Sugeno\FARC - Sugeno\build
 
-	3 - Run a Shell Script loop to take all the results:
-	
-		for a in {DATASET_1,DATASET_2,DATASET_N);
-			do for b in {FUZZY_MEASURE_1,FUZZY_MEASURE_2,FUZZY_MEASURE_N};
-				do for c in {CV_1,CV_2,CV_3,CV_4,CV_5};
-					do java -cp build/classes FARCHD.Main param.txt $a $b $c CROSS_VALIDATION;
-					done;
-				done;
-			done;
+    3 - Run a Shell Script loop to take all the results:
 
-		VARIABLES MUST BE:
-			DATASET_1,DATA_SET2...  =  appendicitis,balance,banana,bands,bupa,cleveland,contraceptive,ecoli,glass,haberman,hayes-roth,ionosphere,iris,led7digit,magic,newthyroid,page-blocks,penbased,phoneme,pima,ring,saheart,satimage,segment,shuttle,sonar,spectfheart,titanic,twonorm,vehicle,wine,wisconsin,yeast
-			FUZZY_MEASURE_1,FUZZY_MEASURE_2...  =  1,2,3,4,5,50 where (1=Cardinalidad, 2=Delta Dirac, 3=Weighted mMean, 4=OWA, 5= Cardinalidad GA, 50=Sugeno)
-			CV_1,CV_2...  =  1,2,3,4,5 (Must be the Cross validation Folders)
-			CROSS_VALIDATION = 5 (This Number represents the cross validation size)
+        for a in {DATASET_1,DATASET_2,DATASET_N};
+            do for b in {FUZZY_MEASURE_1,FUZZY_MEASURE_2,FUZZY_MEASURE_N};
+                do for c in {CV_1,CV_2,CV_3,CV_4,CV_5};
+                    do java -cp build/classes FARCHD.Main param.txt $a $b $c CROSS_VALIDATION;
+                done;
+            done;
+        done;
 
-		EXAMPLES:
-			1 -	for a in iris;
-					do for b in {1,50};
-						do for c in {1,2,3,4,5};
-							do java -cp build/classes FARCHD.Main param.txt $a $b $c 5;
-							done;
-						done;
-					done;
-			
-			2 -	for a in {bupa,glass,balance};
-					do for b in {1,3,4,50};
-						do for c in {1,2,3,4,5};
-							do java -cp build/classes FARCHD.Main param.txt $a $b $c 5;
-							done;
-						done;
-					done;
+        VARIABLES MUST BE:
+            DATASET_1,DATA_SET2...  =  appendicitis,balance,banana,bands,bupa,cleveland,contraceptive,ecoli,glass,haberman,hayes-roth,ionosphere,iris,led7digit,magic,newthyroid,page-blocks,penbased,phoneme,pima,ring,saheart,satimage,segment,shuttle,sonar,spectfheart,titanic,twonorm,vehicle,wine,wisconsin,yeast
+            FUZZY_MEASURE_1,FUZZY_MEASURE_2...  =  1,2,3,4,5,50 where (1=Cardinalidad, 2=Delta Dirac, 3=Weighted mMean, 4=OWA, 5= Cardinalidad GA, 50=Sugeno)
+            CV_1,CV_2...  =  1,2,3,4,5 (Must be the Cross validation Folders)
+            CROSS_VALIDATION = 5 (This Number represents the cross validation size)
 
-			3 - for a in {hayes-roth,ionosphere,iris,led7digit,magic,newthyroid};
-					do for b in 1;
-						do for c in {1,2,3,4,5};
-							do java -cp build/classes FARCHD.Main param.txt $a $b $c 5;
-							done;
-						done;
-					done;
+        EXAMPLES:
+            1 - for a in iris;
+                    do for b in {1,50};
+                        do for c in {1,2,3,4,5};
+                            do java -cp build/classes FARCHD.Main param.txt $a $b $c 5;
+                        done;
+                    done;
+                done;
+
+            2 - for a in {bupa,glass,balance};
+                    do for b in {1,3,4,50};
+                        do for c in {1,2,3,4,5};
+                            do java -cp build/classes FARCHD.Main param.txt $a $b $c 5;
+                        done;
+                    done;
+                done;
+
+            3 - for a in {hayes-roth,ionosphere,iris,led7digit,magic,newthyroid};
+                    do for b in 1;
+                        do for c in {1,2,3,4,5};
+                            do java -cp build/classes FARCHD.Main param.txt $a $b $c 5;
+                        done;
+                    done;
+                done;
 
 
 
 HOW TO TAKE THE RESULTS (Well, when your loop finish, lets take the results):
 
-	4 - Install Python and open this diretory on the terminal:
-		\FRBC\FARC - Sugeno\FARC - Sugeno
+    4 - Install Python and open this diretory on the terminal:
+        \FRBC\FARC - Sugeno\FARC - Sugeno
 
-	5 - Run:
-		python compileResults.py
-	
-	6 - Now the results are saved on the diretory "\FRBC\FARC - Sugeno\FARC - Sugeno\resultsTable.csv" with
-		Mean ± Standard Deviation, for each dataset :D
+    5 - Run:
+        python compileResults.py
+    
+    6 - Now the results are saved on the diretory "\FRBC\FARC - Sugeno\FARC - Sugeno\resultsTable.csv" with
+        Mean ± Standard Deviation, for each dataset :D
 
 
 
 FINALLY :D
 In my case... I just need 3 commands to execute everything:
 
-	1 - cd /mnt/d/Documentos/NetBeansProjects/FRBC/FARC\ -\ Sugeno/FARC\ -\ Sugeno
+    1 - cd /mnt/d/Documentos/NetBeansProjects/FRBC/FARC\ -\ Sugeno/FARC\ -\ Sugeno
 
-	2 - for a in {appendicitis,balance,banana,bands,bupa,cleveland,contraceptive,ecoli,glass,haberman,hayes-roth,ionosphere,iris,led7digit,magic,newthyroid,page-blocks,penbased,phoneme,pima,ring,saheart,satimage,segment,shuttle,sonar,spectfheart,titanic,twonorm,vehicle,wine,wisconsin,yeast};
-		do for b in {5,50};
-			do for c in {1,2,3,4,5};
-				do java -cp build/classes FARCHD.Main param.txt $a $b $c 5;
-				done;
-			done;
-		done;
+    2 - for a in {appendicitis,balance,banana,bands,bupa,cleveland,contraceptive,ecoli,glass,haberman,hayes-roth,ionosphere,iris,led7digit,magic,newthyroid,page-blocks,penbased,phoneme,pima,ring,saheart,satimage,segment,shuttle,sonar,spectfheart,titanic,twonorm,vehicle,wine,wisconsin,yeast};
+            do for b in {5,50};
+                do for c in {1,2,3,4,5};
+                    do java -cp build/classes FARCHD.Main param.txt $a $b $c 5;
+                done;
+            done;
+        done;
 
-	3 - python compileResults.py
-	
+    3 - python compileResults.py
+    
 
 
 CONTACT:
-	Student:
-		Name: Frederico Bender Tiggemann
-		Email: frederico.bender99@gmail.com
-		Phone: +55(51)99565-8670
-		Current Profession: Computer Engineering Student (2017->expectation:2021)
-		University: FURG - Universidade Federal do Rio Grande
+    Student:
+        Name: Frederico Bender Tiggemann
+        Email: frederico.bender99@gmail.com
+        Phone: +55(51)99565-8670
+        Current Profession: Computer Engineering Student (2017->expectation:2021)
+        University: FURG - Universidade Federal do Rio Grande
 
-	Guiding:
-		Giancarlo Lucca  - giancarlo.lucca88@gmail.com
-		Eduardo Borges  -  enborges@gmail.com
-		Graçaliz Dimuro  - gracaliz@gmail.com
-		Helida Salles  -   ldasalles@gmail.com
+    Guiding:
+        Giancarlo Lucca  - giancarlo.lucca88@gmail.com
+        Eduardo Borges  -  enborges@gmail.com
+        Graçaliz Dimuro  - gracaliz@gmail.com
+        Helida Salles  -   ldasalles@gmail.com
