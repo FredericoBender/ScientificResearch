@@ -1,8 +1,9 @@
-package FARCHD;
+package Studying;
 
 import flanagan.complex.Complex;
 import flanagan.math.Polynomial;
 import java.util.ArrayList;
+import java.util.Arrays;
 /* @author Frederico Bender */
 
 public class Sugeno {
@@ -28,7 +29,7 @@ public class Sugeno {
             contador++;           
         }
         polinomioFinal = polinomioFinal.minus(new Polynomial(1,1));
-        //System.out.println("Polinomio final é: " + polinomioFinal);       
+        System.out.println("Polinomio final é: " + polinomioFinal);       
         
         
         Complex[] raizes; //Se o polinomio tem 1 elemento o lambda vale 0 
@@ -46,7 +47,7 @@ public class Sugeno {
                 }
             }
         }
-        //System.out.println("Raizes:" + Arrays.toString(raizes));
+        System.out.println("Raizes:" + Arrays.toString(raizes));
         
         double lambda = 0; //Pega o elemento positivo. Se encontrar
         for (int i=0; i<raizes.length; i++){
@@ -57,7 +58,7 @@ public class Sugeno {
                     break;                  
                 }    
             }
-        }       
+        }         
     //System.out.println("LAMBDA: " +lambda);
     return lambda;
     }

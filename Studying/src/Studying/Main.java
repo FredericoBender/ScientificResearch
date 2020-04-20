@@ -1,7 +1,6 @@
 package Studying;
 
-import java.io.IOException;
-import java.util.Collections; //Usado para ordenar o vetor
+import java.io.IOException; //Usado para ordenar o vetor
 import java.util.ArrayList; //Agora pode usar Array, muito top
 
 /* @author Frederico Bender */
@@ -10,15 +9,20 @@ public class Main {
     public static void main(String[] args) throws IOException {
         ArrayList<Double> x = new ArrayList<>(); //cada instancia é uma g(x)
         double r;
-        x.add(0.2);      
-        x.add(0.4);
-        x.add(0.6);
+        /*
+        x.add(0.3); 
+        x.add(0.9);
+        x.add(0.65);
+        x.add(0.12);
+        */
+        x.add(0.1);
+        x.add(0.12);
+        x.add(0.1);
         x.add(0.7);
-        //sugenoP teste = new sugenoP();
-        //double y = teste.calculateLambda(x);
-        //System.out.println(y);
+        Sugeno teste = new Sugeno();
+        double y = teste.lambda(x);
+        System.out.println(y);
  
-        
         //Collections.sort(x);
        /* 
         SugenoLambda sugeno = new SugenoLambda();   
