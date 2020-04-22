@@ -67,14 +67,19 @@ In my case... I just need 3 commands to execute everything:
 
     1 - cd /mnt/d/Documentos/NetBeansProjects/FRBC/FARC\ -\ Sugeno/FARC\ -\ Sugeno
 
-    2 - for a in {appendicitis,balance,banana,bands,bupa,cleveland,contraceptive,ecoli,glass,haberman,hayes-roth,ionosphere,iris,led7digit,magic,newthyroid,page-blocks,penbased,phoneme,pima,ring,saheart,satimage,segment,shuttle,sonar,spectfheart,titanic,twonorm,vehicle,wine,wisconsin,yeast};
-            do for b in {5,50};
-                do for c in {1,2,3,4,5};
-                    do java -cp build/classes FARCHD.Main param.txt $a $b $c 5;
-                done;
-            done;
-        done;
+    2   a)Running in a single Core:
+            first --> run "for a in {appendicitis,balance,banana,bands,bupa,cleveland,contraceptive,ecoli,glass,haberman,hayes-roth,ionosphere,iris,led7digit,magic,newthyroid,page-blocks,penbased,phoneme,pima,ring,saheart,satimage,segment,shuttle,sonar,spectfheart,titanic,twonorm,vehicle,wine,wisconsin,yeast};
+                                do for b in {5,50};
+                                    do for c in {1,2,3,4,5};
+                                        do java -cp build/classes FARCHD.Main param.txt $a $b $c 5;
+                                    done;
+                                done;
+                            done;"
 
+        b)Or running multi-core, to get results faster:
+            first --> run "sudo apt instal parallel"
+            second --> run "parallel java -cp build/classes FARCHD.Main param.txt ::: iris balance banana ::: 5 50 ::: 1 2 3 4 5 ::: 5"
+            third --> Sort the data on the results.csv archive, without the header
     3 - python compileResults.py
     
 
