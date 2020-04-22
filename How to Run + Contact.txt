@@ -1,10 +1,10 @@
 HOW TO RUN FARC-HD CLASSIFIER:
-    Prepare: If the folder "\FRBC\FARC - Sugeno\FARC - Sugeno\results.csv" contains data below the header, delete everything under the header
+    Prepare: If the folder "\FRBC\SugenoLambda\SugenoLambda\results.csv" contains data below the header, delete everything under the header
 
     1 - Install Java, and JDK on Linux system
 
     2 - Open the terminal on this diretory:
-        \FRBC\FARC - Sugeno\FARC - Sugeno\build
+        \FRBC\SugenoLambda\SugenoLambda\build
 
     3 - Run a Shell Script loop to take all the results:
 
@@ -52,12 +52,12 @@ HOW TO RUN FARC-HD CLASSIFIER:
 HOW TO TAKE THE RESULTS (Well, when your loop finish, lets take the results):
 
     4 - Install Python and open this diretory on the terminal:
-        \FRBC\FARC - Sugeno\FARC - Sugeno
+        \FRBC\SugenoLambda\SugenoLambda
 
     5 - Run:
         python compileResults.py
     
-    6 - Now the results are saved on the diretory "\FRBC\FARC - Sugeno\FARC - Sugeno\resultsTable.csv" with
+    6 - Now the results are saved on the diretory "\FRBC\SugenoLambda\SugenoLambda\resultsTable.csv" with
         Mean ± Standard Deviation, for each dataset :D
 
 
@@ -65,7 +65,7 @@ HOW TO TAKE THE RESULTS (Well, when your loop finish, lets take the results):
 FINALLY :D
 In my case... I just need 3 commands to execute everything:
 
-    1 - cd /mnt/d/Documentos/NetBeansProjects/FRBC/FARC\ -\ Sugeno/FARC\ -\ Sugeno
+    1 - cd /mnt/d/Documentos/NetBeansProjects/FRBC/SugenoLambda/SugenoLambda
 
     2   a)Running in a single Core:
             first --> run "for a in {appendicitis,balance,banana,bands,bupa,cleveland,contraceptive,ecoli,glass,haberman,hayes-roth,ionosphere,iris,led7digit,magic,newthyroid,page-blocks,penbased,phoneme,pima,ring,saheart,satimage,segment,shuttle,sonar,spectfheart,titanic,twonorm,vehicle,wine,wisconsin,yeast};

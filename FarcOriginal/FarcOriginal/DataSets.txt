@@ -1,0 +1,13 @@
+
+inputData = "./data/iris/iris-10-1tra.dat" "./data/iris/iris-10-1tra.dat" "./data/iris/iris-10-1tst.dat"
+inputData = "./data/pima/pima-10-1tra.dat" "./data/pima/pima-10-1tra.dat" "./data/pima/pima-10-1tst.dat"
+inputData = "./data/glass/glass-10-1tra.dat" "./data/glass/glass-10-1tra.dat" "./data/glass/glass-10-1tst.dat"
+inputData = "./data/cleveland/cleveland-5-1tra.dat" "./data/cleveland/cleveland-5-1tra.dat" "./data/cleveland/cleveland-5-1tst.dat"
+inputData = "./data/ecoli/ecoli-5-4tra.dat" "./data/ecoli/ecoli-5-4tra.dat" "./data/ecoli/ecoli-5-4tst.dat"
+inputData = "./data/autos/autos-5-1tra.dat" "./data/autos/autos-5-1tra.dat" "./data/autos/autos-5-1tst.dat"
+
+inputData = "./data/contraceptive/contraceptive-5-1tra.dat" "./data/contraceptive/contraceptive-5-1tra.dat" "./data/contraceptive/contraceptive-5-1tst.dat"
+
+
+
+"output_time.txt" "output_hour.txt" "output_rules.txt" "output_evolution.txt"
