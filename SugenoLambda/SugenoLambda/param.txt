@@ -1,5 +1,5 @@
 algorithm = FARCHD
-inputData = "./data/iris/iris-1-1tra.dat" "./data/iris/iris-1-1tra.dat" "./data/iris/iris-1-1tst.dat"
+inputData = "./data/iris/iris-5-1tra.dat" "./data/iris/iris-5-1tra.dat" "./data/iris/iris-5-1tst.dat"
 
 outputData = "accTraining.txt" "accTest.txt" "membershipFunctions.txt"  "ruleBase.txt"  "time.txt"  "hora.txt"  "rules.txt"  "evolution.txt"  "fileBehaviorTR.txt"  "fileBehaviorTST.txt"
 
