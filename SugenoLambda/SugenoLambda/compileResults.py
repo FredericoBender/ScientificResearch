@@ -51,10 +51,11 @@ def footer(arq):
     cont=1
     while(cont<len(CSV[0])):
         lista = []
-        for i in range(len(CSV)):
+        for i in range(0,len(CSV)):
             lista.append(CSV[i][cont])
-        cont+=1
-        archive.write(","+str(round(Mean(lista),2))+"±"+str(StandarDeviation(lista)))
+        cont+=2   #1 quando utilizar ± 
+        #archive.write(","+str(round(Mean(lista),2))+",±"+str(StandarDeviation(lista)))
+        archive.write(","+str(round(Mean(lista),2))+","+str(StandarDeviation(lista)))
     archive.close()
     
 def WriteCSV(writeArq,readArq="results.csv"):
@@ -66,15 +67,32 @@ def WriteCSV(writeArq,readArq="results.csv"):
             training.append(inputData[cont][3])
             testing.append(inputData[cont][4])
             cont+=1
-        outputData.write(str(round(Mean(training),2))+"±"+str(StandarDeviation(training))+","+str(round(Mean(testing),2))+"±"+str(StandarDeviation(testing)))
+        #outputData.write(str(round(Mean(training),2))+",±"+str(StandarDeviation(training))+","+str(round(Mean(testing),2))+",±"+str(StandarDeviation(testing)))
+        outputData.write(str(round(Mean(training),2))+","+str(StandarDeviation(training))+","+str(round(Mean(testing),2))+","+str(StandarDeviation(testing)))
         return cont, outputData
+
     def cabecalho(outputData):
+        def fm(x):
+            if x==1:
+                return "Cardinalidad"
+            elif x==2:
+                return "Delta Dirac"
+            elif x==3:
+                return "Weighted Mean"
+            elif x==4:
+                return "OWA"
+            elif x==50:
+                return "Sugeno"
+            else:
+                return "CardGA"
+
         FuzzyMeasures = checkDifferentValues(1,readArq)
         outputData.write("dataSet")
         for i in range(len(FuzzyMeasures)):
-            outputData.write(","+str(FuzzyMeasures[i])+"-TRA,"+str(FuzzyMeasures[i])+"-TES")
+            outputData.write(","+fm(FuzzyMeasures[i])+"-Training,SD,"+fm(FuzzyMeasures[i])+"-Testing,SD")
         outputData.write("\n")
         return outputData
+    
     FuzzyMeasures = len(checkDifferentValues(1,readArq))
     crossV =len(checkDifferentValues(2,readArq))
     outputData = open(writeArq,"w")

@@ -18,7 +18,7 @@ HOW TO RUN FARC-HD CLASSIFIER:
 
         VARIABLES MUST BE:
             DATASET_1,DATA_SET2...  =  appendicitis,balance,banana,bands,bupa,cleveland,contraceptive,ecoli,glass,haberman,hayes-roth,ionosphere,iris,led7digit,magic,newthyroid,page-blocks,penbased,phoneme,pima,ring,saheart,satimage,segment,shuttle,sonar,spectfheart,titanic,twonorm,vehicle,wine,wisconsin,yeast
-            FUZZY_MEASURE_1,FUZZY_MEASURE_2...  =  1,2,3,4,5,50 where (1=Cardinalidad, 2=Delta Dirac, 3=Weighted mMean, 4=OWA, 5= Cardinalidad GA, 50=Sugeno)
+            FUZZY_MEASURE_1,FUZZY_MEASURE_2...  =  1,2,3,4,5,50 where (1=Cardinalidad, 2=Delta Dirac, 3=Weighted Mean, 4=OWA, 5= Cardinalidad GA, 50=Sugeno)
             CV_1,CV_2...  =  1,2,3,4,5 (Must be the Cross validation Folders)
             CROSS_VALIDATION = 5 (This Number represents the cross validation size)
 
@@ -78,7 +78,7 @@ In my case... I just need 3 commands to execute everything:
 
         b)Or running multi-core, to get results faster:
             first --> run "sudo apt instal parallel"
-            second --> run "parallel java -cp build/classes FARCHD.Main param.txt ::: iris balance banana ::: 5 50 ::: 1 2 3 4 5 ::: 5"
+            second --> run "parallel java -cp build/classes FARCHD.Main param.txt ::: hayes-roth appendicitis iris newthyroid haberman bupa balance ecoli wine wisconsin glass cleveland led7digit saheart bands spectfheart pima titanic contraceptive yeast ionosphere sonar vehicle banana phoneme page-blocks segment penbased satimage ring twonorm shuttle magic ::: 5 50 ::: 1 2 3 4 5 ::: 5"
             third --> Sort the data on the results.csv archive, without the header
     3 - python compileResults.py
     
