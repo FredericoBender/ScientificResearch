@@ -68,7 +68,7 @@ In my case... I just need 3 commands to execute everything:
     1 - cd /mnt/d/Documentos/NetBeansProjects/FRBC/SugenoLambda/SugenoLambda
 
     2   a)Running in a single Core:
-            first --> run "for a in {appendicitis,balance,banana,bands,bupa,cleveland,contraceptive,ecoli,glass,haberman,hayes-roth,ionosphere,iris,led7digit,magic,newthyroid,page-blocks,penbased,phoneme,pima,ring,saheart,satimage,segment,shuttle,sonar,spectfheart,titanic,twonorm,vehicle,wine,wisconsin,yeast};
+            first --> run "for a in {hayes-roth,appendicitis,iris,newthyroid,haberman,led7digit,bupa,balance,ecoli,wine,glass,cleveland,saheart,wisconsin,bands,page-blocks,pima,spectfheart,titanic,contraceptive,yeast,shuttle,sonar,ionosphere,banana,satimage,vehicle,penbased,twonorm,ring,magic,phoneme,segment};
                                 do for b in {5,50};
                                     do for c in {1,2,3,4,5};
                                         do java -cp build/classes FARCHD.Main param.txt $a $b $c 5;
@@ -78,14 +78,15 @@ In my case... I just need 3 commands to execute everything:
 
         b)Or running multi-core, to get results faster:
             first --> run "sudo apt instal parallel"
-            second --> run "parallel java -cp build/classes FARCHD.Main param.txt ::: hayes-roth appendicitis iris newthyroid haberman bupa balance ecoli wine wisconsin glass cleveland led7digit saheart bands spectfheart pima titanic contraceptive yeast ionosphere sonar vehicle banana phoneme page-blocks segment penbased satimage ring twonorm shuttle magic ::: 5 50 ::: 1 2 3 4 5 ::: 5"
+            second --> run "parallel java -cp build/classes FARCHD.Main param.txt ::: hayes-roth appendicitis iris newthyroid haberman led7digit bupa balance ecoli wine glass cleveland saheart wisconsin bands page-blocks pima spectfheart titanic contraceptive yeast shuttle sonar ionosphere banana satimage vehicle penbased twonorm ring magic phoneme segment ::: 5 50 ::: 1 2 3 4 5 ::: 5"
             third --> Sort the data on the results.csv archive, without the header
+    
     3 - python compileResults.py
     
 
 
 CONTACT:
-    Student:
+    Student Developer:
         Name: Frederico Bender Tiggemann
         Email: frederico.bender99@gmail.com
         Phone: +55(51)99565-8670
