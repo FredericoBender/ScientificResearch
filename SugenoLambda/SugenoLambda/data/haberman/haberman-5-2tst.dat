@@ -1,10 +1,10 @@
-@relation haberman
-@attribute Age integer [30, 83]
-@attribute Year integer [58, 69]
-@attribute Positive integer [0, 52]
-@attribute Survival {positive, negative}
+@relation unknow
+@attribute Age real [30.0, 83.0]
+@attribute Year real [58.0, 69.0]
+@attribute Positive real [0.0, 52.0]
+@attribute class {positive, negative}
 @inputs Age, Year, Positive
-@outputs Survival
+@outputs class
 @data
 64.0, 58.0, 0.0, negative
 55.0, 69.0, 22.0, negative

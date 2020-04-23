@@ -1,12 +1,12 @@
-@relation newthyroid
-@attribute T3resin integer [65, 144]
-@attribute Thyroxin real [0.5, 25.3]
-@attribute Triiodothyronine real [0.2, 10.0]
-@attribute Thyroidstimulating real [0.1, 56.4]
+@relation unknow
+@attribute T3resin real [65.0, 144.0]
+@attribute thyroxin real [0.5, 25.3]
+@attribute triiodothyronine real [0.2, 10.0]
+@attribute thyroidstimulating real [0.1, 56.4]
 @attribute TSH_value real [-0.7, 56.3]
-@attribute Class {3, 2, 1}
-@inputs T3resin, Thyroxin, Triiodothyronine, Thyroidstimulating, TSH_value
-@outputs Class
+@attribute class {3, 2, 1}
+@inputs T3resin, thyroxin, triiodothyronine, thyroidstimulating, TSH_value
+@outputs class
 @data
 107.0, 10.1, 2.2, 0.9, 2.7, 1
 107.0, 13.0, 1.1, 0.9, 3.1, 1

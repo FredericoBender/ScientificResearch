@@ -1,25 +1,25 @@
-@relation vehicle
-@attribute Compactness integer [73, 119]
-@attribute Circularity integer [33, 59]
-@attribute Distance_circularity integer [40, 112]
-@attribute Radius_ratio integer [104, 333]
-@attribute Praxis_aspect_ratio integer [47, 138]
-@attribute Max_length_aspect_ratio integer [2, 55]
-@attribute Scatter_ratio integer [112, 265]
-@attribute Elongatedness integer [26, 61]
-@attribute Praxis_rectangular integer [17, 29]
-@attribute Length_rectangular integer [118, 188]
-@attribute Major_variance integer [130, 320]
-@attribute Minor_variance integer [184, 1018]
-@attribute Gyration_radius integer [109, 268]
-@attribute Major_skewness integer [59, 135]
-@attribute Minor_skewness integer [0, 22]
-@attribute Minor_kurtosis integer [0, 41]
-@attribute Major_kurtosis integer [176, 206]
-@attribute Hollows_ratio integer [181, 211]
-@attribute Class {van, saab, bus, opel}
-@inputs Compactness, Circularity, Distance_circularity, Radius_ratio, Praxis_aspect_ratio, Max_length_aspect_ratio, Scatter_ratio, Elongatedness, Praxis_rectangular, Length_rectangular, Major_variance, Minor_variance, Gyration_radius, Major_skewness, Minor_skewness, Minor_kurtosis, Major_kurtosis, Hollows_ratio
-@outputs Class
+@relation unknow
+@attribute COMPACTNESS real [73.0, 119.0]
+@attribute CIRCULARITY real [33.0, 59.0]
+@attribute DISTANCECIRCULARITY real [40.0, 112.0]
+@attribute RADIUSRATIO real [104.0, 333.0]
+@attribute PRAXISASPECTRATIO real [47.0, 138.0]
+@attribute MAXLENGTHASPECTRATIO real [2.0, 55.0]
+@attribute SCATTERRATIO real [112.0, 265.0]
+@attribute ELONGATEDNESS real [26.0, 61.0]
+@attribute PRAXISRECTANGULAR real [17.0, 29.0]
+@attribute LENGTHRECTANGULAR real [118.0, 188.0]
+@attribute MAJORVARIANCE real [130.0, 320.0]
+@attribute MINORVARIANCE real [184.0, 1018.0]
+@attribute GYRATIONRADIUS real [109.0, 268.0]
+@attribute MAJORSKEWNESS real [59.0, 135.0]
+@attribute MINORSKEWNESS real [0.0, 22.0]
+@attribute MINORKURTOSIS real [0.0, 41.0]
+@attribute MAJORKURTOSIS real [176.0, 206.0]
+@attribute HOLLOWSRATIO real [181.0, 211.0]
+@attribute class {van, saab, bus, opel}
+@inputs COMPACTNESS, CIRCULARITY, DISTANCECIRCULARITY, RADIUSRATIO, PRAXISASPECTRATIO, MAXLENGTHASPECTRATIO, SCATTERRATIO, ELONGATEDNESS, PRAXISRECTANGULAR, LENGTHRECTANGULAR, MAJORVARIANCE, MINORVARIANCE, GYRATIONRADIUS, MAJORSKEWNESS, MINORSKEWNESS, MINORKURTOSIS, MAJORKURTOSIS, HOLLOWSRATIO
+@outputs class
 @data
 95.0, 48.0, 83.0, 178.0, 72.0, 10.0, 162.0, 42.0, 20.0, 159.0, 176.0, 379.0, 184.0, 70.0, 6.0, 16.0, 187.0, 197.0, van
 91.0, 41.0, 84.0, 141.0, 57.0, 9.0, 149.0, 45.0, 19.0, 143.0, 170.0, 330.0, 158.0, 72.0, 9.0, 14.0, 189.0, 199.0, van

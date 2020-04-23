@@ -1,4 +1,4 @@
-@relation glass
+@relation unknow
 @attribute RI real [1.51115, 1.53393]
 @attribute Na real [10.73, 17.38]
 @attribute Mg real [0.0, 4.49]
@@ -8,9 +8,9 @@
 @attribute Ca real [5.43, 16.19]
 @attribute Ba real [0.0, 3.15]
 @attribute Fe real [0.0, 0.51]
-@attribute TypeGlass {1, 2, 3, 4, 5, 6, 7}
+@attribute typeGlass {1, 2, 3, 4, 5, 6, 7}
 @inputs RI, Na, Mg, Al, Si, K, Ca, Ba, Fe
-@outputs TypeGlass
+@outputs typeGlass
 @data
 1.51910022, 13.90205, 3.73119, 1.17917, 72.1228, 0.0621, 8.89472, 0.0, 0.0, 1
 1.51793844, 13.21045, 3.47975, 1.41029, 72.638, 0.58995, 8.43204, 0.0, 0.0, 1
