@@ -1,0 +1,33 @@
+        MEASURES OF OVERLAP OF INDIVIDUAL FEATURE VALUES
+        **  F1 = Fisher's Discriminant Ratio
+        **  F2 = Volume of Overlap Region
+        n   F3 = Feature Efficiency
+
+        MEASURES OF SEPARABILITY OF CLASSES
+        **  L1 = Linear Separability
+        **  L2 = ||
+        n   N1 = Mixture Identifiability
+        n   N2 = ||
+        n   N3 = ||
+
+        MEASURES OF GEOMETRY, TOPOLOGY AND DENSITY OF MANIFOLDS
+        **  L3 = Nonlinearity
+        n   N4 = ||
+        n   T1 = Space Covering by Neighborhoods
+        n   T2 = Others
+
+Multiclass
+        F3 =
+        N1 = 
+        N2 = -1 é ERRO
+        N3 =
+        N4 = -1 é ERRO
+        T1 =
+        T2 =
+        
+One vs One & One vs All
+        F1 = Infinity é ERRO
+        F2 = NaN é ERRO (Acontece quando pelo menos 1 atributo possuí mesmo valor em todas as instâncias)
+        L1 = -1 é ERRO, NaN é ERRO (Acontece quando pelo menos 1 atributo possuí mesmo valor em todas as instâncias)
+        L2 = -1 é ERRO
+        L3 = -1 é ERRO

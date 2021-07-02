@@ -1,0 +1,17 @@
+algorithm = Complexity Measures
+inputData = "./data/iris.dat"
+
+runF1 = true
+runF2 = true
+runF3 = true
+runN1 = true
+runN2 = true
+runN3 = true
+runN4 = true
+runL1 = true
+runL2 = true
+runL3 = true
+runT1 = true
+runT2 = true
+
+seed = 123

@@ -1,0 +1,23 @@
+Dataset: flame | Class:  1 | Xmean: 7.05517 | Ymean: 24.38851
+Dataset: flame | Class:  1 | Xvar: 3.26698 | Yvar: 3.45202 
+
+Dataset: flame | Class:  2 | Xmean: 7.47647 | Ymean: 18.96111
+Dataset: flame | Class:  2 | Xvar: 14.21313 | Yvar: 5.29803  
+
+
+
+Dataset: jain | Class:  1 | Xmean: 27.71504 | Ymean: 9.02536
+Dataset: jain | Class:  1 | Xvar: 69.07575 | Yvar: 16.95934 
+
+Dataset: jain | Class:  2 | Xmean: 14.70103 | Ymean: 21.02526
+Dataset: jain | Class:  2 | Xvar: 51.72047 | Yvar: 12.82829  
+
+
+
+
+
+
+
+flame Y: (24.38851 - 18.96111)² / (3.45202 + 5.29803) = 3,36645
+
+jain Y: (9.02536 - 21.02526)² / (16.95934 + 12.82829) = 4,83814

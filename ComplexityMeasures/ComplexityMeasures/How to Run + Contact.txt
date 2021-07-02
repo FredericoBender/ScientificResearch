@@ -1,0 +1,32 @@
+1 - MEU NOTEBOOK -> cd /mnt/d/Documentos/NetBeansProjects/ComplexityMeasures/ComplexityMeasures
+    GINFO PC -> cd /mnt/c/Users/GINFO/Desktop/ComplexityMeasures/ComplexityMeasures
+    
+2 - Running:
+    Pre-processing algorithm for datasets with "preProcessing.py", then:
+        first --> run for 'one vs one' -> for a in {appendicitis,balance,banana,bands,bupa,cleveland,contraceptive,ecoli,glass,haberman,hayes-roth,ionosphere,iris,led7digit,magic,newthyroid,page-blocks,penbased,phoneme,pima,ring,saheart,satimage,segment,shuttle,sonar,spectfheart,titanic,twonorm,vehicle,wine,wisconsin,yeast};do for ((i=1;i<=10;++i)); do for ((j=i;j<=10;++j)); do java -cp build/classes Complexity_Metrics.Run param.txt $a $i $j;done;done;done;
+                run for 'one vs all' -> for a in {appendicitis,balance,banana,bands,bupa,cleveland,contraceptive,ecoli,glass,haberman,hayes-roth,ionosphere,iris,led7digit,magic,newthyroid,page-blocks,penbased,phoneme,pima,ring,saheart,satimage,segment,shuttle,sonar,spectfheart,titanic,twonorm,vehicle,wine,wisconsin,yeast};do for b in {1..10};do java -cp build/classes Complexity_Metrics.Run param.txt $a $b all;done;done;
+                run for 'MultiClass' -> for a in {appendicitis,balance,banana,bands,bupa,cleveland,contraceptive,ecoli,glass,haberman,hayes-roth,ionosphere,iris,led7digit,magic,newthyroid,page-blocks,penbased,phoneme,pima,ring,saheart,satimage,segment,shuttle,sonar,spectfheart,titanic,twonorm,vehicle,wine,wisconsin,yeast};do java -cp build/classes Complexity_Metrics.Run param.txt $a;done;
+
+                or PARALLEL:
+                    parallel java -cp build/classes Complexity_Metrics.Run param.txt ::: appendicitis balance banana bands bupa cleveland contraceptive ecoli glass haberman hayes-roth ionosphere iris led7digit magic newthyroid page-blocks penbased phoneme pima ring saheart satimage segment shuttle sonar spectfheart titanic twonorm vehicle wine wisconsin yeast ::: {1..10} ::: {1..10}
+                    parallel java -cp build/classes Complexity_Metrics.Run param.txt ::: appendicitis balance banana bands bupa cleveland contraceptive ecoli glass haberman hayes-roth ionosphere iris led7digit magic newthyroid page-blocks penbased phoneme pima ring saheart satimage segment shuttle sonar spectfheart titanic twonorm vehicle wine wisconsin yeast ::: {1..10} ::: all
+                    parallel java -cp build/classes Complexity_Metrics.Run param.txt ::: appendicitis balance banana bands bupa cleveland contraceptive ecoli glass haberman hayes-roth ionosphere iris led7digit magic newthyroid page-blocks penbased phoneme pima ring saheart satimage segment shuttle sonar spectfheart titanic twonorm vehicle wine wisconsin yeast
+                    
+                    parallel java -cp build/classes Complexity_Metrics.Run param.txt ::: aggregation compound D31 flame jain pathbased R15 spiral ::: {1..31} ::: {1..31} ; parallel java -cp build/classes Complexity_Metrics.Run param.txt ::: aggregation compound D31 flame jain pathbased R15 spiral ::: {1..31} ::: all ; parallel java -cp build/classes Complexity_Metrics.Run param.txt ::: aggregation compound D31 flame jain pathbased R15 spiral
+
+
+3 - Compile Results with algorithm "compileResults.py"
+
+CONTACT:
+    Student Developer:
+        Name: Frederico Bender Tiggemann
+        Email: frederico.bender99@gmail.com
+        Phone: +55(51)99565-8670
+        Current Profession: Computer Engineering Student (2017->expectation:2021)
+        University: FURG - Universidade Federal do Rio Grande
+
+    Guiding:
+        Giancarlo Lucca  - giancarlo.lucca88@gmail.com
+        Eduardo Borges  -  enborges@gmail.com
+        Graçaliz Dimuro  - gracaliz@gmail.com
+        Helida Salles  -   ldasalles@gmail.com
