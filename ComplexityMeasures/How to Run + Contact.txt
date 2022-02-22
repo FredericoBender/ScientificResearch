@@ -30,3 +30,12 @@ CONTACT:
         Eduardo Borges  -  enborges@gmail.com
         Graçaliz Dimuro  - gracaliz@gmail.com
         Helida Salles  -   ldasalles@gmail.com
+
+
+
+
+        pre processamento
+        rodar java
+        
+        compile results para obter numeros
+        viewmeasures para obter imagens

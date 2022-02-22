@@ -1,5 +1,5 @@
 #Example: https://matplotlib.org/3.1.1/gallery/lines_bars_and_markers/nan_test.html#sphx-glr-gallery-lines-bars-and-markers-nan-test-py
-from mst import *
+from dependencias.mst import *
 from matplotlib import pyplot as plt 
 import pandas as pd
 
@@ -20,7 +20,7 @@ def Connect(x, y, connectionType="intraClass"):
 
 datasets = ["aggregation","compound","pathbased","spiral","D31","R15","jain","flame"]
 rows, columns = 2, 4
-medida = "n1" #"n1" = arvore, "n2" = medida n2
+medida = "n2" #"n1" = arvore, "n2" = medida n2
 
 
 plt.figure(figsize=(columns*11, rows*11))
@@ -76,4 +76,4 @@ for row in range(rows): #[0,1]
         plt.legend(loc="center right", bbox_to_anchor=(1.15, 0.5), prop={'size': 16})
 
 # plt.show()
-plt.savefig("viewN1_generated.pdf", bbox_inches='tight')
+plt.savefig("viewN2_generated.pdf", bbox_inches='tight')

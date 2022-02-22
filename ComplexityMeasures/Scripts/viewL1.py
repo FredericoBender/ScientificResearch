@@ -1,4 +1,4 @@
-from mst import getDataFrom
+from dependencias.mst import getDataFrom
 from matplotlib import pyplot as plt
 from statistics import mean 
 import math

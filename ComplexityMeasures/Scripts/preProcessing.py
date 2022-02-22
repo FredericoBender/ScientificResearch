@@ -125,7 +125,7 @@ def RunScript1():
         newData = SubstituteMaxMin(newData)
         newData = RemoveAtributosInvariaveis(newData)
 
-        ArchiveCreated = CreateArchive(str(inputData)+"_"+str(i+1)+"_vs_all.dat") #Salva os dados no arquivo
+        ArchiveCreated = CreateArchive("../JavaCode/data/"+str(inputData)+"_"+str(i+1)+"_vs_all.dat") #Salva os dados no arquivo
         ArchiveCreated.write(newData)
         ArchiveCreated.close()
 
@@ -151,7 +151,7 @@ def RunScript2():
             newData = SubstituteMaxMin(newData)
             newData = RemoveAtributosInvariaveis(newData)
 
-            ArchiveCreated = CreateArchive(str(inputData)+"_"+str(i+1)+"_vs_"+str(j+1)+".dat")
+            ArchiveCreated = CreateArchive("../JavaCode/data/"+str(inputData)+"_"+str(i+1)+"_vs_"+str(j+1)+".dat")
             ArchiveCreated.write(newData)
             ArchiveCreated.close()
  
@@ -160,15 +160,15 @@ def RunScript2():
 # inputs = ["appendicitis","balance","banana","bands","bupa","cleveland","contraceptive","ecoli","glass","haberman","hayes-roth","ionosphere","iris","led7digit","magic","newthyroid","page-blocks","penbased","phoneme","pima","ring","saheart","satimage","segment","shuttle","sonar","spectfheart","titanic","twonorm","vehicle","wine","wisconsin","yeast"]
 inputs=["aggregation","compound","pathbased","spiral","D31","R15","jain","flame"] #http://cs.joensuu.fi/sipu/datasets/
 
-for inputData in inputs[:]:
-    archive = ReadArchive("Shape Datasets/"+str(inputData)+".dat")
+for inputData in inputs[:1]:
+    archive = ReadArchive("../JavaCode/data/Shape Datasets/"+str(inputData)+".dat")
     classesList,regexClasses = FindClasses()
     print(inputData, "classes = "+str(len(classesList)))
     
     archive = SubstituteMaxMin(archive)
     archive = RemoveAtributosInvariaveis(archive)
 
-    newData = CreateArchive(str(inputData)+".dat")
+    newData = CreateArchive("../JavaCode/data/"+str(inputData)+".dat")
     newData.write(archive)
     newData.close()
 
@@ -178,6 +178,6 @@ for inputData in inputs[:]:
     else:
         current=["_1_vs_2.dat","_1_vs_all.dat"]
         for i in range(2):
-            newData = CreateArchive(str(inputData)+str(current[i]))
+            newData = CreateArchive("../JavaCode/data/"+str(inputData)+str(current[i]))
             newData.write(archive)
             newData.close()
