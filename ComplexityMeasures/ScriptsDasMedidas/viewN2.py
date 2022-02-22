@@ -20,7 +20,7 @@ def Connect(x, y, connectionType="intraClass"):
 
 datasets = ["aggregation","compound","pathbased","spiral","D31","R15","jain","flame"]
 rows, columns = 1, 4
-medida = "n1" #"n1" = arvore, "n2" = medida n2
+medida = "n2" #"n1" = arvore, "n2" = medida n2
 
 
 plt.figure(figsize=(columns*11, rows*11))
@@ -28,7 +28,7 @@ for row in range(rows): #[0,1]
     for col in range(columns):#[0,1,2]
         if row*columns + col >= len(datasets):
             break
-        nodes = getDataFrom("ComplexityMeasures/data/Shape Datasets/" + datasets[row*columns + col] + ".csv")
+        nodes = getDataFrom("../JavaCode/data/Shape Datasets/" + datasets[row*columns + col] + ".csv")
         edges = getEdgesFrom(nodes)
         edges.sort()
         

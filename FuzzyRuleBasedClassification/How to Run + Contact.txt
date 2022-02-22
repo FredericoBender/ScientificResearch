@@ -89,8 +89,8 @@ CONTACT:
     Student Developer:
         Name: Frederico Bender Tiggemann
         Email: frederico.bender99@gmail.com
-        Phone: +55(51)99565-8670
-        Current Profession: Computer Engineering Student (2017->expectation:2021)
+        Phone: +55 (51) 9 9565-8670
+        Current Profession: Computer Engineer (03/2017 -> 03/2022)
         University: FURG - Universidade Federal do Rio Grande
 
     Guiding:
