@@ -1,3 +1,6 @@
+MOTIVO DO GIT: TCC...
+ORGANIZATION OF THE FILES: JAVA, RESULTADOS, ETC...
+
 INSTALLING THE DEPENDENCIES:
     1 - Download and install Java : https://www.java.com/pt-BR/download/ie_manual.jsp?locale=pt_BR
     2 - Download and install Java SE Development Kit : https://www.oracle.com/java/technologies/downloads/
