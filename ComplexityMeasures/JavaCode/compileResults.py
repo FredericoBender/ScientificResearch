@@ -83,9 +83,9 @@ def WriteCSV(writeArq,readArq):
     writeData.close()
 
 import re
-resultados = ["Results_OneVsAll.csv","Results_OneVsOne.csv","Results_MultiClass.csv"]
+resultados = ["resultsOneVsAll.csv","resultsOneVsOne.csv","resultsMultiClass.csv"]
 
 for i in resultados:
     SortData(i)
-WriteCSV("Conclusion_OneVsAll.csv","Results_OneVsAll.csv")
-WriteCSV("Conclusion_OneVsOne.csv","Results_OneVsOne.csv")
+WriteCSV("Conclusion_OneVsAll.csv","resultsOneVsAll.csv")
+WriteCSV("Conclusion_OneVsOne.csv","resultsOneVsOne.csv")

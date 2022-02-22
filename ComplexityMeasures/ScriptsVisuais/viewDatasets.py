@@ -10,7 +10,7 @@ for row in range(rows):
     for col in range(columns):
         if(row*columns + col>=len(datasets)):
             break
-        data = pd.read_csv(datasets[row*columns + col]+".csv") 
+        data = pd.read_csv("../JavaCode/data/Shape Datasets/"+datasets[row*columns + col]+".csv") 
         plt.subplot(columns, rows, row*columns + col + 1)
         plt.axis("equal")
         for name, group in data.groupby("species"):
@@ -19,5 +19,5 @@ for row in range(rows):
         plt.title(datasets[row*columns + col],fontsize=45)
         plt.legend(loc="center right",bbox_to_anchor=(1.12, 0.5))
 
-plt.savefig("datasets.pdf",bbox_inches='tight')
+plt.savefig("viewDatasets_generated.pdf",bbox_inches='tight')
 plt.show()

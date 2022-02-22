@@ -157,11 +157,11 @@ def RunScript2():
  
 #ALGORITMO RODA APENAS SE FOR UM DATASET COM MAIS DE 2 CLASSES, CASO TENHA SÓ 2 CLASSE, ELE SÓ COPIA OS DATASETS, CRIANDO 3 ARQUIVOS IGUAIS
 
-inputs = ["appendicitis","balance","banana","bands","bupa","cleveland","contraceptive","ecoli","glass","haberman","hayes-roth","ionosphere","iris","led7digit","magic","newthyroid","page-blocks","penbased","phoneme","pima","ring","saheart","satimage","segment","shuttle","sonar","spectfheart","titanic","twonorm","vehicle","wine","wisconsin","yeast"]
-#inputs=["aggregation","compound","pathbased","spiral","D31","R15","jain","flame"] #http://cs.joensuu.fi/sipu/datasets/
-inputs=["saheart","segment","ecoli"]
+# inputs = ["appendicitis","balance","banana","bands","bupa","cleveland","contraceptive","ecoli","glass","haberman","hayes-roth","ionosphere","iris","led7digit","magic","newthyroid","page-blocks","penbased","phoneme","pima","ring","saheart","satimage","segment","shuttle","sonar","spectfheart","titanic","twonorm","vehicle","wine","wisconsin","yeast"]
+inputs=["aggregation","compound","pathbased","spiral","D31","R15","jain","flame"] #http://cs.joensuu.fi/sipu/datasets/
+
 for inputData in inputs[:]:
-    archive = ReadArchive(str(inputData)+".dat")
+    archive = ReadArchive("Shape Datasets/"+str(inputData)+".dat")
     classesList,regexClasses = FindClasses()
     print(inputData, "classes = "+str(len(classesList)))
     

@@ -19,8 +19,8 @@ def Connect(x, y, connectionType="intraClass"):
 
 
 datasets = ["aggregation","compound","pathbased","spiral","D31","R15","jain","flame"]
-rows, columns = 1, 4
-medida = "n2" #"n1" = arvore, "n2" = medida n2
+rows, columns = 2, 4
+medida = "n1" #"n1" = arvore, "n2" = medida n2
 
 
 plt.figure(figsize=(columns*11, rows*11))
@@ -34,7 +34,7 @@ for row in range(rows): #[0,1]
         
         minimumSpanningTree = kruskal(edges)
         
-        data = pd.read_csv("ComplexityMeasures/data/Shape Datasets/" + datasets[row*columns + col] + ".csv") 
+        data = pd.read_csv("../JavaCode/data/Shape Datasets/" + datasets[row*columns + col] + ".csv") 
         plt.subplot(rows, columns, row*columns + col + 1)
         plt.axis("equal")
         edges.sort()
@@ -76,4 +76,4 @@ for row in range(rows): #[0,1]
         plt.legend(loc="center right", bbox_to_anchor=(1.15, 0.5), prop={'size': 16})
 
 # plt.show()
-plt.savefig("N1_1.pdf", bbox_inches='tight')
+plt.savefig("viewN1_generated.pdf", bbox_inches='tight')

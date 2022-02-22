@@ -18,7 +18,7 @@ def Euclidean_Distance(x0, y0, x1, y1):
 
 if __name__ == "__main__":
     datasets = ["aggregation","compound","pathbased","spiral","D31","R15","jain","flame"]
-    rows, columns = 1, 4
+    rows, columns = 2, 4
     
     cores = ["red", "green", "blue", "yellow","pink","purple", "orange","olive","cyan","gray","darkslategray","violet","lawngreen","tomato","goldenrod","darkcyan","indigo"]*2
     plt.figure(figsize=(columns*11, rows*11))
@@ -26,8 +26,8 @@ if __name__ == "__main__":
         for col in range(columns):#[0,1,2]
             if row*columns + col >= len(datasets):
                 break
-            nodes = getDataFrom("ComplexityMeasures/data/Shape Datasets/" + datasets[row*columns + col] + ".csv")
-            data = pd.read_csv("ComplexityMeasures/data/Shape Datasets/" + datasets[row*columns + col] + ".csv") 
+            nodes = getDataFrom("../JavaCode/data/Shape Datasets/" + datasets[row*columns + col] + ".csv")
+            data = pd.read_csv("../JavaCode/data/Shape Datasets/" + datasets[row*columns + col] + ".csv") 
             plt.subplot(rows, columns, row*columns + col + 1)
             plt.axis("equal")
             plt.grid(True, zorder=0)
@@ -87,4 +87,4 @@ if __name__ == "__main__":
             plt.legend(loc="center right", bbox_to_anchor=(1.15, 0.5), prop={'size': 16})
 
     # plt.show()
-    plt.savefig("L1_1.pdf", bbox_inches='tight')
+    plt.savefig("viewL1_generated.pdf", bbox_inches='tight')
