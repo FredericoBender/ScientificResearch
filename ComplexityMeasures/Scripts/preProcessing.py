@@ -160,7 +160,7 @@ def RunScript2():
 # inputs = ["appendicitis","balance","banana","bands","bupa","cleveland","contraceptive","ecoli","glass","haberman","hayes-roth","ionosphere","iris","led7digit","magic","newthyroid","page-blocks","penbased","phoneme","pima","ring","saheart","satimage","segment","shuttle","sonar","spectfheart","titanic","twonorm","vehicle","wine","wisconsin","yeast"]
 inputs=["aggregation","compound","pathbased","spiral","D31","R15","jain","flame"] #http://cs.joensuu.fi/sipu/datasets/
 
-for inputData in inputs[:1]:
+for inputData in inputs[:]:
     archive = ReadArchive("../JavaCode/data/Shape Datasets/"+str(inputData)+".dat")
     classesList,regexClasses = FindClasses()
     print(inputData, "classes = "+str(len(classesList)))
