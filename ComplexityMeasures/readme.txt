@@ -94,7 +94,7 @@ CONTACT:
         Current Profession: Computer Engineer (03/2017 -> 03/2022)
         University: FURG - Universidade Federal do Rio Grande
 
-    Guiding:
-        Giancarlo Lucca  - giancarlo.lucca88@gmail.com
-        Helida Salles    - ldasalles@gmail.com
-        Eduardo Borges   - enborges@gmail.com
+    Advisors:
+        Giancarlo Lucca  - giancarlo.lucca@furg.br
+        Helida Salles    - helida@furg.br
+        Eduardo Borges   - eduardoborges@furg.br
